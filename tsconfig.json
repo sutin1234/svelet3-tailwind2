@@ -8,4 +8,7 @@
     "__sapper__/*",
     "public/*"
   ],
+  "compilerOptions": {
+    "sourceMap": true
+  }
 }

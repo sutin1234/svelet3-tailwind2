@@ -13,8 +13,8 @@
   import Tables from "views/admin/Tables.svelte";
   import Maps from "views/admin/Maps.svelte";
 
-  export const location = "";
-  export const admin = "";
+  export let location: any;
+  export let admin: any;
 </script>
 
 <div>
@@ -23,7 +23,7 @@
     <AdminNavbar />
     <HeaderStats />
     <div class="w-full px-4 mx-auto -m-24 md:px-10">
-      <Router url="admin">
+      <Router url={admin}>
         <Route path="dashboard" component={Dashboard} />
         <Route path="settings" component={Settings} />
         <Route path="tables" component={Tables} />

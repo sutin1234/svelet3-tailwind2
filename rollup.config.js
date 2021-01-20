@@ -18,9 +18,9 @@ const production = !process.env.ROLLUP_WATCH;
 const aliases = alias({
   resolve: [".svelte", ".js", ".ts"], //optional, by default this will just look for .js files or folders
   entries: [
-    { find: "components", replacement: "src/components" },
-    { find: "views", replacement: "src/views" },
-    { find: "assets", replacement: "src/assets" },
+    { find: "components", replacement: "./src/components" },
+    { find: "views", replacement: "./src/views" },
+    { find: "assets", replacement: "./src/assets" },
   ],
 });
 
@@ -53,7 +53,7 @@ export default {
   input: "src/main.ts",
   output: {
     // sourcemap: true,
-    format: "es",
+    // format: "es",
     name: "app",
     file: "public/build/bundle.js",
   },
